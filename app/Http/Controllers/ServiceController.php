@@ -260,7 +260,7 @@ class ServiceController extends Controller
             ->orWhere('company_name','LIKE', '%' . $request->search . '%');
         }
 
-        return view('pages/search', ['services'], compact('specializations', 'companies',
+        return view('pages/search', compact(, 'services','specializations', 'companies',
             'genders', 'cities'));
     }
 }
