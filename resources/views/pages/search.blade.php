@@ -94,8 +94,8 @@
             </div>
 
         @endforelse
-        <div class="float-right">
-            {{$services->appends(request()->input())->links()}}
-        </div>
+{{--        <div class="float-right">--}}
+{{--            {{$services->appends(request()->input())->links()}}--}}
+{{--        </div>--}}
     </div>
 @endsection
