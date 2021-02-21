@@ -29,7 +29,7 @@ class ServiceController extends Controller
             ->select('services.id', 'services.first_name', 'services.last_name', 'services.gender',
                 'specializations.specialization_name', 'companies.company_name', 'services.city', 'services.img',
                 DB::raw('ROUND(AVG(reviews.stars)) as stars'), DB::raw('COUNT(reviews.stars) as number'))
-            ->groupBy('services.id',  'specializations.specialization_name', 'companies.company_name')
+            ->groupBy('services.id',  'specializations.specialization_name', 'companies.company_name','reviews.stars')
             ->orderBy('services.created_at', 'DESC')
             ->paginate(5);
 
