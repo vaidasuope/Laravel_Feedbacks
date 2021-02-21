@@ -11012,13 +11012,13 @@ label {
 }
 
 input:checked ~ label {
-  color: #fc0;
+  color: yellow;
 }
 
 :root {
   --star-size: 30px;
   --star-off-color: white;
-  --star-on-color: #fc0;
+  --star-on-color: yellow;
 }
 
 .average-star-rating {
@@ -11047,7 +11047,7 @@ input:checked ~ label {
   }
 
   p {
-    line-height: 5px;
+    line-height: 10px;
     font-size: 10px;
   }
 
