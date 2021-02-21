@@ -68,7 +68,7 @@
             </div>
         </div>
 
-        @forelse($services as $service)
+        @foreach($services as $service)
             <div class="row justify-content-center">
                 <div class="col-md-10 m-2 background">
                     <div class="row d-flex align-items-center">
@@ -96,14 +96,14 @@
                 </div>
             </div>
 
-        @empty
-            <div class="row justify-content-center">
-                <div class="col-md-10 m-2 background">
-                    <h3 class="text-center p-5">No results found</h3>
-                </div>
-            </div>
+{{--        @empty--}}
+{{--            <div class="row justify-content-center">--}}
+{{--                <div class="col-md-10 m-2 background">--}}
+{{--                    <h3 class="text-center p-5">No results found</h3>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
-        @endforelse
+        @endforeach
         <div class="float-right">
             {{$services->links()}}
         </div>

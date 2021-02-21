@@ -29,7 +29,7 @@ Route::post('/addComment','ReviewController@addCommentToDatabase');
 Route::post('/addStar','ReviewController@addStarToDatabase');
 
 //Search
-Route::get('/search','ServiceController@search');
+Route::get('/search','SearchController@search');
 
 
 Route::get('/add-spec', 'SpecializationController@addSpec');
