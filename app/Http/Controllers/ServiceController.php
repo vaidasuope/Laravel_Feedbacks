@@ -175,7 +175,8 @@ class ServiceController extends Controller
         Service::where('services.id', $service->id)->update($request->only(['first_name', 'last_name', 'gender', 'city',
             'specialization_id', 'company_id', 'description']));
 
-        return redirect('/service/' . $service->id);
+        return redirect('/service/' . $service->id)->with(['message' => 'Add is updated!', 'alert' => 'alert-success']);
+//        return redirect('/service/' . $service->id);
     }
 
     public function showFull(Service $service)

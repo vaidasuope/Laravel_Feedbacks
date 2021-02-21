@@ -6,7 +6,7 @@
 
             @include('_partials/errors')
 
-            <div class="row d-flex justify-content-center">
+{{--            <div class="row d-flex justify-content-center">--}}
                 <div class="col-md-12">
                     @if(session()->has('message'))
                         <div class="alert {{session('alert') ?? 'alert-info'}}">
@@ -14,8 +14,7 @@
                         </div>
                     @endif
                 </div>
-            </div>
-
+{{--            </div>--}}
 
             <div class="col-md-10 m-2 background">
 
