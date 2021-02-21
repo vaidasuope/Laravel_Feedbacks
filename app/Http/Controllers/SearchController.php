@@ -61,7 +61,9 @@ class SearchController extends Controller
                 ->orWhere('company_name','LIKE', '%' . $request->search . '%');
         }
 
-        return view('pages/search', ['services' => $services->get()], compact('specializations', 'companies',
+//        ['services' => $services->get()]
+
+        return view('pages/search', compact('services','specializations', 'companies',
             'genders', 'cities'));
     }
 }
