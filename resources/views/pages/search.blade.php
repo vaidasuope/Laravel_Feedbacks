@@ -95,7 +95,7 @@
 
         @endforelse
         <div class="float-right">
-            {{$services->total()}}
+            {{$services->appends(request()->input())->links()}}
         </div>
     </div>
 @endsection
