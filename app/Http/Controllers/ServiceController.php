@@ -236,8 +236,7 @@ class ServiceController extends Controller
             ->groupBy('services.id', 'specializations.specialization_name', 'companies.company_name', 'reviews.stars');
 
         if ($request->filled('specialization_name')) {
-            $services->where('specialization_name', $request->specialization_name)
-            ->count('specialization_name');
+            $services->where('specialization_name', $request->specialization_name);
         }
         if ($request->filled('city')) {
             $services->where('city', $request->city);
@@ -259,7 +258,7 @@ class ServiceController extends Controller
             ->orWhere('company_name','LIKE', '%' . $request->search . '%');
         }
 
-        return view('pages/search', ['services' => $services->paginate(3)], compact('specializations', 'companies',
+        return view('pages/search', ['services' => $services->count()->paginate(3)->], compact('specializations', 'companies',
             'genders', 'cities'));
     }
 }
