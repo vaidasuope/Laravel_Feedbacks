@@ -48,7 +48,7 @@ class SearchController extends Controller
             $services->where('company_name', $request->comp);
         }
         if ($request->filled('raiting')) {
-            $services->having( DB::raw('count(stars)'), $request->raiting);
+            $services->having( DB::raw('avg(stars)'), $request->raiting);
         }
         if ($request->filled('gender')) {
             $services->where('gender', $request->gender);
