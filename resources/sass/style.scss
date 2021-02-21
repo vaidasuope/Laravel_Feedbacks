@@ -1,0 +1,118 @@
+body {
+    background-image: url("resources/views/img/back.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    //font-family: Times;
+    font-weight: 200;
+    height: 100%;
+    margin: 0;
+}
+
+.background {
+    background-color: rgb(242, 210, 182);
+}
+
+.contentBox {
+    background-color: rgba(242, 210, 182, .6);
+}
+p {
+    line-height: 9px;
+}
+.img {
+    height: 150px;
+}
+.smallText {
+    font-size: 13px;
+    font-style: italic;
+}
+.smallText > a {
+    color: black;
+    text-decoration: underline;
+}
+
+.searchBox {
+    background-color: rgb(232, 161, 137);
+    height: 100px;
+}
+.textSize {
+    font-size: 15px;
+}
+.textAbout {
+    line-height: 17px;
+}
+
+.wrapper {
+    display: inline-block;
+}
+.wrapper * {
+    float: right;
+}
+.input {
+    display: none;
+}
+label {
+    color: white;
+    font-size: 30px;
+}
+
+input:checked ~ label {
+    color: #fc0;
+}
+
+
+:root {
+    --star-size: 30px;
+    --star-off-color: white;
+    --star-on-color: #fc0;
+}
+.average-star-rating {
+    --percent: calc(var(--rating) / 5 * 100%);
+    //display: inline-block;
+    font-size: var(--star-size);
+    font-family: 'Nunito', sans-serif;
+    line-height: 1;
+    &::before {
+        content: "★★★★★";
+        letter-spacing: 1px;
+        background: linear-gradient(
+                90deg,
+                var(--star-on-color) var(--percent),
+                var(--star-off-color) var(--percent)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@media (max-width: 575px){
+
+    .searchBox {
+        height: 170px;
+    }
+
+    .img {
+        height: 100px;
+    }
+
+    p {
+        line-height: 5px;
+        font-size: 10px;
+    }
+
+    :root {
+        --star-size: 15px;
+    }
+}
+//
+//a {
+//    color: black;
+//    padding: 0 25px;
+//    font-size: 13px;
+//    font-weight: 600;
+//    letter-spacing: .1rem;
+//    text-decoration: none;
+//    text-transform: uppercase;
+//}
