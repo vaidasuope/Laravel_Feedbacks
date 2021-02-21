@@ -48,7 +48,7 @@ class SearchController extends Controller
             $services->where('company_name', $request->comp);
         }
         if ($request->filled('raiting')) {
-            $services->having('stars', $request->raiting);
+            $services->having( DB::raw('count(stars)'), $request->raiting);
         }
         if ($request->filled('gender')) {
             $services->where('gender', $request->gender);
@@ -63,7 +63,7 @@ class SearchController extends Controller
 
 //        ['services' => $services->get()]
 
-        return view('pages/search', compact('services','specializations', 'companies',
+        return view('pages/search', ['services' => $services->paginate(3)], compact('specializations', 'companies',
             'genders', 'cities'));
     }
 }
