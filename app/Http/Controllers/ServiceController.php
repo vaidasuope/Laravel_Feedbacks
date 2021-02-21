@@ -237,7 +237,7 @@ class ServiceController extends Controller
 
         if ($request->filled('specialization_name')) {
             $services->where('specialization_name', $request->specialization_name)
-            ->count();
+            ->count('specialization_name');
         }
         if ($request->filled('city')) {
             $services->where('city', $request->city);
