@@ -64,18 +64,19 @@ input:checked ~ label {
 
 :root {
     --star-size: 30px;
-    --star-off-color: white;
-    --star-on-color: yellow;
+    --star-off-color: #ffffff;
+    --star-off-opacity: .5;
+    --star-on-color: #ffff00;
+    content: "☆☆☆☆☆";
 }
 .average-star-rating {
     --percent: calc(var(--rating) / 5 * 100%);
-    //display: inline-block;
+    display: inline-block;
     font-size: var(--star-size);
     font-family: 'Nunito', sans-serif;
     line-height: 1;
     &::before {
         content: "★★★★★";
-        color: white;
         letter-spacing: 1px;
         background: linear-gradient(
                 90deg,
