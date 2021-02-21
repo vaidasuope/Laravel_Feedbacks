@@ -235,6 +235,8 @@ class ServiceController extends Controller
                 DB::raw('ROUND(AVG(reviews.stars)) as stars'), DB::raw('COUNT(reviews.stars) as number'))
             ->groupBy('services.id', 'specializations.specialization_name', 'companies.company_name', 'reviews.stars');
 
+        $services->paginate(3);
+
         if ($request->filled('specialization_name')) {
             $services->where('specialization_name', $request->specialization_name);
         }
@@ -258,7 +260,7 @@ class ServiceController extends Controller
             ->orWhere('company_name','LIKE', '%' . $request->search . '%');
         }
 
-        return view('pages/search', ['services' => $services->paginate(8)], compact('specializations', 'companies',
+        return view('pages/search', ['services' => $services->count()], compact('specializations', 'companies',
             'genders', 'cities'));
     }
 }
