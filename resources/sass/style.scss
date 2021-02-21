@@ -75,6 +75,7 @@ input:checked ~ label {
     line-height: 1;
     &::before {
         content: "★★★★★";
+        color: white;
         letter-spacing: 1px;
         background: linear-gradient(
                 90deg,

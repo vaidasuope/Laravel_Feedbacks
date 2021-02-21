@@ -11030,6 +11030,7 @@ input:checked ~ label {
 
 .average-star-rating::before {
   content: "\2605\2605\2605\2605\2605";
+  color: white;
   letter-spacing: 1px;
   background: linear-gradient(90deg, var(--star-on-color) var(--percent), var(--star-off-color) var(--percent));
   background-clip: text;
