@@ -236,7 +236,7 @@ class ServiceController extends Controller
             ->groupBy('services.id', 'specializations.specialization_name', 'companies.company_name', 'reviews.stars');
 
         if ($request->filled('specialization_name')) {
-            $services->where('specialization_name', $request->specialization_name)->total();
+            $services->where('specialization_name', $request->specialization_name);
         }
         if ($request->filled('city')) {
             $services->where('city', $request->city);
