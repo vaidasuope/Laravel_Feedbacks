@@ -34,9 +34,9 @@
                 <div class="row">
                     <div class="col-md-3 d-flex justify-content-center">
                         @if($service->img)
-                        <img src="/{{$service->img}}" style="height: 160px" class="p-3">
+                        <img src="/{{$service->img}}" style="height: 160px" class="p-3" alt="Failed to load photo">
                         @else
-                            <img src="https://banffventureforum.com/wp-content/uploads/2019/08/no-photo-icon-22.png" style="height: 160px" class="p-3">
+                            <img src="https://banffventureforum.com/wp-content/uploads/2019/08/no-photo-icon-22.png" alt="Failed to load photo" style="height: 160px" class="p-3">
                         @endif
                     </div>
                     <div class="col-md ml-2 p-3 mt-3 ml-4">

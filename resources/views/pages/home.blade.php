@@ -74,9 +74,9 @@
                     <div class="row d-flex align-items-center">
                         <div class="col-md-3 col-6 d-flex justify-content-center">
                             @if($service->img)
-                                <img src="{{$service->img}}" class="p-3 img">
+                                <img src="{{$service->img}}" alt="Failed to load photo" class="p-3 img">
                             @else
-                                <img src="https://banffventureforum.com/wp-content/uploads/2019/08/no-photo-icon-22.png" class="p-3 img">
+                                <img src="https://banffventureforum.com/wp-content/uploads/2019/08/no-photo-icon-22.png" alt="Failed to load photo" class="p-3 img">
                             @endif
                         </div>
                         <div class="col-md-4 col-5 ml-2 p-3">
